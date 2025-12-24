@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Clay Co. - Handcrafted Beach Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hero-blue: #8DB4C7;
+            --hero-pink: #F4D4D4;
+            --seabreeze: #C9E4E7;
+            --sand: #F5EBE0;
+            --driftwood: #9C8577;
+            --ocean: #8DB4C7;
+            --sunset: #E8B4A8;
+            --cream: #FFFCF9;
+            --charcoal: #4A4A4A;
+            --coral: #FF9B7F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(255, 252, 249, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 3rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(156, 133, 119, 0.1);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .crab-logo {
+            width: 70px;
+            height: 70px;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Cdefs%3E%3ClinearGradient id="crabGrad" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:%238DB4C7;stop-opacity:0.85" /%3E%3Cstop offset="50%25" style="stop-color:%23E8B4A8;stop-opacity:0.9" /%3E%3Cstop offset="100%25" style="stop-color:%23F4D4D4;stop-opacity:0.85" /%3E%3C/linearGradient%3E%3C/defs%3E%3Cellipse cx="100" cy="105" rx="42" ry="32" fill="url(%23crabGrad)" opacity="0.95"/%3E%3Cpath d="M 60 95 Q 40 90, 35 80 Q 30 70, 40 65 L 50 75 Q 55 80, 58 85" fill="url(%23crabGrad)" opacity="0.9"/%3E%3Cpath d="M 140 95 Q 160 90, 165 80 Q 170 70, 160 65 L 150 75 Q 145 80, 142 85" fill="url(%23crabGrad)" opacity="0.9"/%3E%3Cline x1="68" y1="118" x2="55" y2="145" stroke="%238DB4C7" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/%3E%3Cline x1="78" y1="122" x2="68" y2="150" stroke="%238DB4C7" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/%3E%3Cline x1="88" y1="125" x2="82" y2="152" stroke="%238DB4C7" stroke-width="3" opacity="0.8" stroke-linecap="round"/%3E%3Cline x1="132" y1="118" x2="145" y2="145" stroke="%238DB4C7" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/%3E%3Cline x1="122" y1="122" x2="132" y2="150" stroke="%238DB4C7" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/%3E%3Cline x1="112" y1="125" x2="118" y2="152" stroke="%238DB4C7" stroke-width="3" opacity="0.8" stroke-linecap="round"/%3E%3Cellipse cx="85" cy="95" rx="7" ry="8" fill="white" opacity="0.95"/%3E%3Cellipse cx="115" cy="95" rx="7" ry="8" fill="white" opacity="0.95"/%3E%3Cellipse cx="87" cy="95" rx="3.5" ry="4" fill="%234A4A4A"/%3E%3Cellipse cx="117" cy="95" rx="3.5" ry="4" fill="%234A4A4A"/%3E%3Cpath d="M 82 108 Q 100 113, 118 108" stroke="%23E8B4A8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/%3E%3C/svg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--hero-blue), var(--hero-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+        }
+        
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--sand);
+            border-radius: 30px;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--ocean);
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--driftwood);
+            transition: transform 0.3s;
+        }
+        
+        .icon-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .hero {
+            height: 70vh;
+            background: linear-gradient(135deg, var(--hero-blue) 0%, var(--hero-pink) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            background: white;
+            color: var(--driftwood);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            margin-bottom: 0.5rem;
+        }
+        
+        .beach-message {
+            text-align: center;
+            padding: 3rem 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--ocean);
+            font-style: italic;
+            background: linear-gradient(135deg, rgba(201, 228, 231, 0.2), rgba(244, 212, 212, 0.2));
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .seasonal-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--coral);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--driftwood);
+            margin-bottom: 0.5rem;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--ocean);
+            margin: 0.5rem 0;
+        }
+        
+        .wishlist-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .wishlist-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .builder-section {
+            background: linear-gradient(135deg, var(--sand) 0%, var(--hero-pink) 100%);
+            padding: 5rem 3rem;
+            margin: 5rem -3rem;
+        }
+        
+        .builder-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+        }
+        
+        .builder-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--sand);
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--charcoal);
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--ocean);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--ocean);
+        }
+        
+        .builder-content {
+            display: none;
+        }
+        
+        .builder-content.active {
+            display: block;
+        }
+        
+        .bracelet-circle {
+            width: 300px;
+            height: 300px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        
+        .bracelet-bead {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .bracelet-bead:hover {
+            transform: scale(1.2);
+        }
+        
+        .bead-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
+            gap: 0.5rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: var(--sand);
+            border-radius: 12px;
+        }
+        
+        .tiny-bead {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .tiny-bead:hover {
+            transform: scale(1.3);
+        }
+        
+        .letter-section, .charms-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .letter-section input {
+            padding: 0.7rem 1rem;
+            border: 2px solid var(--sand);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 150px;
+            margin-right: 1rem;
+        }
+        
+        .charm-options {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .charm-btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--sand);
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+        }
+        
+        .charm-btn:hover {
+            background: var(--seabreeze);
+            transform: translateY(-3px);
+        }
+        
+        .games-section {
+            margin: 5rem 0;
+        }
+        
+        .game-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .game-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--driftwood);
+            margin-bottom: 1rem;
+        }
+        
+        .game-canvas {
+            background: linear-gradient(180deg, #87CEEB 0%, #F5DEB3 100%);
+            border-radius: 16px;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--charcoal);
+            background: none;
+            border: none;
+            z-index: 10;
+        }
+        
+        .help-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--ocean);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(141, 180, 199, 0.4);
+            z-index: 1500;
+            transition: all 0.3s;
+        }
+        
+        .help-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .beach-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .beach-photo {
+            height: 300px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background: var(--sand);
+            padding: 4rem 3rem 2rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--driftwood);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin: 0.5rem 0;
+        }
+        
+        .footer-section a {
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--ocean);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--driftwood);
+            color: var(--charcoal);
+        }
+        
+        .btn-primary {
+            background: var(--ocean);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #7BA4B6;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container" onclick="scrollToTop()">
+                <div class="crab-logo"></div>
+                <span class="brand-name">COASTAL CLAY CO.</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search bracelets, necklaces, stickers..." id="searchInput" onkeyup="searchProducts()">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#shop">Shop All</a></li>
+                <li><a href="#custom">Custom</a></li>
+                <li><a href="#" onclick="showAboutUs()">About Us</a></li>
+                <li><a href="#" onclick="showAccount()">Account</a></li>
+            </ul>
+            
+            <div class="header-icons">
+                <button class="icon-btn" onclick="showWishlist()" title="Wishlist">♡</button>
+                <button class="icon-btn" onclick="showCart()" title="Cart">🛒</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Handcrafted Beach Jewelry</h1>
+            <p>Every piece tells a story, inspired by windswept walks along Rehoboth Beach</p>
+            <a href="#shop" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <main id="mainContent">
+        <div class="beach-message">
+            "The ocean stirs the heart, inspires the imagination"
+        </div>
+
+        <section style="background: linear-gradient(135deg, #E8F4F8, #F4D4D4); padding: 3rem; border-radius: 16px; margin: 3rem 0; text-align: center;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--ocean); margin-bottom: 1rem;">Winter Collection</h2>
+            <p style="font-size: 1.2rem; color: var(--charcoal); margin-bottom: 2rem;">Cozy bracelets & festive designs for the holiday season</p>
+            <button class="cta-button" onclick="filterBySeason('winter')">Shop Winter</button>
+        </section>
+
+        <section id="shop">
+            <div class="section-header">
+                <h2>Shop Our Collection</h2>
+                <p>Handcrafted with love from Maryland's coast</p>
+            </div>
+            
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <div class="beach-message">
+            "Life is better at the beach"
+        </div>
+
+        <section id="custom" class="builder-section">
+            <div class="builder-container">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Design Your Own</h2>
+                    <p>Create a unique piece that's perfectly you</p>
+                </div>
+
+                <div class="builder-tabs">
+                    <button class="tab-btn active" onclick="switchTab('bracelet')">Bracelet</button>
+                    <button class="tab-btn" onclick="switchTab('necklace')">Necklace</button>
+                    <button class="tab-btn" onclick="switchTab('sticker')">Sticker</button>
+                </div>
+
+                <div id="bracelet-builder" class="builder-content active">
+                    <div class="bracelet-circle" id="braceletCircle"></div>
+                    
+                    <h4 style="text-align: center; margin-bottom: 1rem; color: var(--driftwood);">Choose Your Beads</h4>
+                    <div class="bead-palette" id="beadPalette"></div>
+                    
+                    <div class="letter-section">
+                        <h4 style="color: var(--driftwood); margin-bottom: 1rem;">Add Letters</h4>
+                        <input type="text" id="letterInput" placeholder="Type letter" maxlength="1">
+                        <button class="btn-primary" onclick="addLetter()">Add Letter</button>
+                    </div>
+                    
+                    <div class="charms-section">
+                        <h4 style="color: var(--driftwood); margin-bottom: 1rem;">Add Charms</h4>
+                        <div class="charm-options">
+                            <button class="charm-btn" onclick="addCharm('□')" title="Gold Square">□</button>
+                            <button class="charm-btn" onclick="addCharm('○')" title="Gold Circle">○</button>
+                            <button class="charm-btn" onclick="addCharm('★')" title="Star">★</button>
+                            <button class="charm-btn" onclick="addCharm('♡')" title="Heart">♡</button>
+                            <button class="charm-btn" onclick="addCharm('◆')" title="Diamond">◆</button>
+                            <button class="charm-btn" onclick="addCharm('✿')" title="Flower">✿</button>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn-primary" onclick="clearDesign()">Clear</button>
+                        <button class="btn-primary" onclick="saveCustomBracelet()" style="margin-left: 1rem;">Add to Cart ($3.99)</button>
+                    </div>
+                </div>
+
+                <div id="necklace-builder" class="builder-content">
+                    <div class="bracelet-circle" id="necklaceCircle"></div>
+                    
+                    <h4 style="text-align: center; margin-bottom: 1rem; color: var(--driftwood);">Choose Your Beads</h4>
+                    <div class="bead-palette" id="beadPaletteNecklace"></div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn-primary" onclick="clearNecklace()">Clear</button>
+                        <button class="btn-primary" onclick="saveCustomNecklace()" style="margin-left: 1rem;">Add to Cart ($5.99)</button>
+                    </div>
+                </div>
+
+                <div id="sticker-builder" class="builder-content">
+                    <div style="background: white; border: 2px solid var(--sand); border-radius: 16px; width: 400px; height: 400px; margin: 2rem auto; position: relative;" id="stickerCanvas"></div>
+                    
+                    <div style="text-align: center;">
+                        <input type="text" placeholder="Add text" id="stickerText" style="padding: 0.7rem; border: 2px solid var(--sand); border-radius: 8px; margin-right: 1rem;">
+                        <button class="btn-primary" onclick="addStickerText()">Add Text</button>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn-primary" onclick="clearSticker()">Clear</button>
+                        <button class="btn-primary" onclick="saveCustomSticker()" style="margin-left: 1rem;">Add to Cart ($2.99)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="beach-message">
+            "We love you! Thank you for supporting our dream"
+        </div>
+
+        <section id="games" class="games-section">
+            <div class="section-header">
+                <h2>Take a Break & Play!</h2>
+                <p>Enjoy our fun beach-themed mini-games</p>
+            </div>
+            
+            <div class="game-options">
+                <div class="game-card" onclick="playGame('match')">
+                    <h3>Card Matcher</h3>
+                    <p>Match pairs of coastal items in this relaxing memory game</p>
+                </div>
+                
+                <div class="game-card" onclick="playGame('circle')">
+                    <h3>Perfect Circle</h3>
+                    <p>Draw the most perfect circle you can</p>
+                </div>
+                
+                <div class="game-card" onclick="playGame('catch')">
+                    <h3>Bead Catcher</h3>
+                    <p>Catch falling clay beads in your beach bag</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="beach-photos">
+            <div class="beach-photo" style="background: linear-gradient(135deg, rgba(201, 228, 231, 0.7), rgba(244, 212, 212, 0.7)), 
+                url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22%3E%3Crect fill=%22%23C9E4E7%22 width=%22800%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22serif%22 font-size=%2228%22 fill=%22%23fff%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERehoboth Beach Boardwalk%3C/text%3E%3C/svg%3E') center/cover;"></div>
+            <div class="beach-photo" style="background: linear-gradient(135deg, rgba(232, 180, 168, 0.7), rgba(245, 235, 224, 0.7)), 
+                url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22%3E%3Crect fill=%22%23E8B4A8%22 width=%22800%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22serif%22 font-size=%2228%22 fill=%22%23fff%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EOcean City Sunrise%3C/text%3E%3C/svg%3E') center/cover;"></div>
+            <div class="beach-photo" style="background: linear-gradient(135deg, rgba(245, 235, 224, 0.7), rgba(201, 228, 231, 0.7)), 
+                url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22%3E%3Crect fill=%22%23F5EBE0%22 width=%22800%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22serif%22 font-size=%2228%22 fill=%22%239C8577%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ESandy Shores%3C/text%3E%3C/svg%3E') center/cover;"></div>
+        </section>
+    </main>
+
+    <button class="help-button" onclick="showHelp()">?</button>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('gameModal')">×</button>
+            <div id="gameContent"></div>
+        </div>
+    </div>
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('helpModal')">×</button>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--driftwood); margin-bottom: 2rem;">How Can We Help?</h2>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--ocean); margin-bottom: 0.5rem;">Track Your Order</h3>
+                <input type="text" placeholder="Order number" style="width: 100%; padding: 0.7rem; border: 2px solid var(--sand); border-radius: 8px;">
+                <button class="btn-primary" style="margin-top: 0.5rem;">Track Order</button>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--ocean);">How long will my order take to deliver?</h3>
+                <p>Standard: 5-7 business days | Expedited (USA): 2-3 business days</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--ocean);">What is sizing like?</h3>
+                <p>Small: 6-6.5 inches | Normal: 7-7.5 inches | Large: 8-8.5 inches</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--ocean);">How do I care for my CC items?</h3>
+                <p>Avoid water and harsh chemicals • Store in cool, dry place • Clean with soft cloth</p>
+            </div>
+            
+            <div>
+                <h3 style="color: var(--ocean);">What are our shipping destinations and fees?</h3>
+                <p>USA: $4.99 standard, $12.99 expedited | We currently ship within the United States only</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('aboutModal')">×</button>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--driftwood); margin-bottom: 2rem;">About Us</h2>
+            <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                We are a group of middle schoolers from the beautiful coast of Maryland, dreaming to bring joy, creativity, and a little sparkle into everyone's day. What started as a simple love for making clay bead bracelets and necklaces has grown into a small, passionate business fueled by friendship, imagination, and the calmness of our coastal home.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                The beach is our sanctuary — the place where the sound of the waves inspires new ideas, colors, and designs. Each piece we create carries a little piece of that peace and joy, so you can feel the calm and happiness of the ocean every time you wear it.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                We are committed to making fun, colorful, and high-quality accessories that bring smiles to our friends, family, and customers. Every bracelet and necklace is handmade with care, creativity, and a touch of youthful energy.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                Our inspiration comes from the vibrant colors of seashells, sunsets over the water, and the beauty of nature around us. We believe that even small handmade creations can make someone's day brighter, and we're excited to share our creativity with the world.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1rem; font-weight: 600;">
+                Thank you for supporting our dream — every purchase helps us continue to create, explore, and share a little piece of Maryland's magic with you!
+            </p>
+            <p style="margin-top: 2rem; text-align: center; color: var(--ocean); font-weight: 600;">
+                Contact: zeena.abdin@icloud.com
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#shop">All Products</a></li>
+                    <li><a href="#" onclick="filterBySeason('winter')">Winter Collection</a></li>
+                    <li><a href="#" onclick="filterBySeason('regular')">Regular Collection</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#" onclick="showHelp()">Help Center</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#" onclick="showAboutUs()">Our Story</a></li>
+                    <li><a href="mailto:zeena.abdin@icloud.com">Contact Us</a></li>
+                    <li><a href="#" onclick="alert('Terms of Service: All products are handmade. Orders ship within 5-7 business days.')">Terms of Service</a></li>
+                    <li><a href="#" onclick="alert('Privacy Policy: We respect your privacy. Your information is used only for orders and never shared.')">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>zeena.abdin@icloud.com</p>
+                <p style="margin-top: 1rem; font-style: italic;">Handcrafted with love in Maryland</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Coastal Clay Co. • Made by middle schoolers who love the beach</p>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            // Winter Collection
+            {id: 1, name: "Snowflake Dreams", type: "bracelet", season: "winter", price: 4.99, colors: ["#E8F4F8", "#C9E4E7", "#FFFFFF"]},
+            {id: 2, name: "Winter Wonderland", type: "bracelet", season: "winter", price: 4.99, colors: ["#B0E0E6", "#FFFFFF", "#87CEEB"]},
+            {id: 3, name: "Frosty Morning", type: "bracelet", season: "winter", price: 4.99, colors: ["#F0F8FF", "#ADD8E6", "#E0FFFF"]},
+            {id: 4, name: "Ice Crystal", type: "bracelet", season: "winter", price: 4.99, colors: ["#E0FFFF", "#AFEEEE", "#B0E0E6"]},
+            {id: 5, name: "Christmas Joy", type: "bracelet", season: "christmas", price: 4.99, colors: ["#DC143C", "#228B22", "#FFFFFF"]},
+            {id: 6, name: "Peppermint Twist", type: "bracelet", season: "christmas", price: 4.99, colors: ["#FF0000", "#FFFFFF", "#FF0000"]},
+            {id: 7, name: "Holly Jolly", type: "bracelet", season: "christmas", price: 4.99, colors: ["#B22222", "#006400", "#FFD700"]},
+            {id: 8, name: "Gingerbread", type: "bracelet", season: "christmas", price: 4.99, colors: ["#8B4513", "#FFFFFF", "#DC143C"]},
+            {id: 9, name: "Silent Night", type: "bracelet", season: "christmas", price: 4.99, colors: ["#00008B", "#FFFFFF", "#FFD700"]},
+            {id: 10, name: "Candy Cane", type: "bracelet", season: "christmas", price: 4.99, colors: ["#FF0000", "#FFFFFF", "#FF0000"]},
+            
+            // Regular Collection
+            {id: 11, name: "Ocean Waves", type: "bracelet", season: "regular", price: 2.99, colors: ["#C9E4E7", "#8DB4C7", "#FFFFFF"]},
+            {id: 12, name: "Sunset Glow", type: "bracelet", season: "regular", price: 2.99, colors: ["#E8B4A8", "#F4D4D4", "#FFD4B2"]},
+            {id: 13, name: "Beach Breeze", type: "bracelet", season: "regular", price: 2.99, colors: ["#F5EBE0", "#C9E4E7", "#F4D4D4"]},
+            {id: 14, name: "Coral Dreams", type: "bracelet", season: "regular", price: 2.99, colors: ["#FF9B7F", "#F4D4D4", "#FFFFFF"]},
+            {id: 15, name: "Sandy Shores", type: "bracelet", season: "regular", price: 2.99, colors: ["#F5EBE0", "#9C8577", "#FFFFFF"]},
+            {id: 16, name: "Aqua Marine", type: "bracelet", season: "regular", price: 2.99, colors: ["#C9E4E7", "#D4E8E0", "#8DB4C7"]},
+            {id: 17, name: "Blush Bay", type: "bracelet", season: "regular", price: 2.99, colors: ["#F4D4D4", "#E8B4A8", "#FFFFFF"]},
+            {id: 18, name: "Seashell Pink", type: "bracelet", season: "regular", price: 2.99, colors: ["#F4D4D4", "#FFFFFF", "#C9E4E7"]},
+            
+            // Stickers - Crab Logo Variations
+            {id: 20, name: "Crab Logo Sticker", type: "sticker", season: "regular", price: 1.99},
+            {id: 21, name: "Brand Name Sticker", type: "sticker", season: "regular", price: 1.99},
+            {id: 22, name: "Story Quote Sticker", type: "sticker", season: "regular", price: 1.99},
+            {id: 23, name: "Complete Logo Sticker", type: "sticker", season: "regular", price: 1.99},
+            {id: 24, name: "Motivational Pack", type: "sticker-pack", season: "regular", price: 3.99},
+            {id: 25, name: "Sports Pack", type: "sticker-pack", season: "regular", price: 3.99},
+            {id: 26, name: "Beach Pack", type: "sticker-pack", season: "regular", price: 3.99},
+            
+            // Winter Stickers
+            {id: 27, name: "Winter Sticker Pack", type: "sticker-pack", season: "winter", price: 3.99},
+            {id: 28, name: "Christmas Sticker Pack", type: "sticker-pack", season: "christmas", price: 3.99},
+        ];
+
+        const colors = [
+            "#FF6B9D", "#FFB5C2", "#FFC0CB", "#FFE4E1",
+            "#C9E4E7", "#87CEEB", "#ADD8E6", "#B0E0E6",
+            "#98FB98", "#90EE90", "#D4E8E0", "#C4E8C2",
+            "#E8B4A8", "#FFD4B2", "#FFDAB9", "#F5DEB3",
+            "#F5EBE0", "#FFFCF9", "#FFFFFF", "#F0F0F0",
+            "#9C8577", "#D2B48C", "#DEB887", "#F4A460",
+            "#E6E6FA", "#D8BFD8", "#DDA0DD", "#DA70D6",
+            "#FFD700", "#FFA500", "#FF8C00", "#FF7F50",
+            "#DC143C", "#8B0000", "#B22222", "#CD5C5C",
+            "#228B22", "#006400", "#32CD32", "#00FF00",
+        ];
+
+        let braceletBeads = [];
+        let necklaceBeads = [];
+        let wishlist = [];
+        let cart = [];
+
+        function init() {
+            loadProducts();
+            createBeadPalette();
+            createBeadPaletteNecklace();
+        }
+
+        function loadProducts(filter = null) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+            
+            let filtered = filter ? products.filter(p => p.season === filter) : products;
+            
+            filtered.forEach(product => {
+                const card = createProductCard(product);
+                grid.appendChild(card);
+            });
+        }
+
+        function createProductCard(product) {
+            const div = document.createElement('div');
+            div.className = 'product-card';
+            div.onclick = () => showProductDetail(product);
+            
+            const badge = product.season !== 'regular' ? 
+                `<div class="seasonal-badge">${product.season.toUpperCase()}</div>` : '';
+            
+            const bg = product.colors ? 
+                `linear-gradient(135deg, ${product.colors[0]}, ${product.colors[1] || product.colors[0]})` :
+                'linear-gradient(135deg, #C9E4E7, #F4D4D4)';
+            
+            div.innerHTML = `
+                <div class="product-image" style="background: ${bg};">
+                    ${badge}
+                    <button class="wishlist-btn" onclick="event.stopPropagation(); toggleWishlist(${product.id})">♡</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">${product.name}</div>
+                    <div class="price">$${product.price}</div>
+                </div>
+            `;
+            
+            return div;
+        }
+
+        function showProductDetail(product) {
+            alert(`${product.name} - $${product.price}\n\nClick OK to add to cart!`);
+            cart.push(product);
+        }
+
+        function createBeadPalette() {
+            const palette = document.getElementById('beadPalette');
+            colors.forEach(color => {
+                const bead = document.createElement('div');
+                bead.className = 'tiny-bead';
+                bead.style.background = color;
+                bead.onclick = () => addBeadToCircle(color);
+                palette.appendChild(bead);
+            });
+        }
+
+        function createBeadPaletteNecklace() {
+            const palette = document.getElementById('beadPaletteNecklace');
+            colors.forEach(color => {
+                const bead = document.createElement('div');
+                bead.className = 'tiny-bead';
+                bead.style.background = color;
+                bead.onclick = () => addBeadToNecklace(color);
+                palette.appendChild(bead);
+            });
+        }
+
+        function addBeadToCircle(color) {
+            braceletBeads.push({color, type: 'bead'});
+            renderBracelet();
+        }
+
+        function addLetter() {
+            const letter = document.getElementById('letterInput').value.toUpperCase();
+            if (letter) {
+                braceletBeads.push({color: '#FFFFFF', type: 'letter', content: letter});
+                renderBracelet();
+                document.getElementById('letterInput').value = '';
+            }
+        }
+
+        function addCharm(symbol) {
+            braceletBeads.push({color: '#FFD700', type: 'charm', content: symbol});
+            renderBracelet();
+        }
+
+        function renderBracelet() {
+            const circle = document.getElementById('braceletCircle');
+            circle.innerHTML = '';
+            
+            const radius = 130;
+            const centerX = 150;
+            const centerY = 150;
+            const angleStep = (2 * Math.PI) / Math.max(braceletBeads.length, 20);
+            
+            braceletBeads.forEach((bead, index) => {
+                const angle = index * angleStep;
+                const x = centerX + radius * Math.cos(angle) - 10;
+                const y = centerY + radius * Math.sin(angle) - 10;
+                
+                const beadDiv = document.createElement('div');
+                beadDiv.className = 'bracelet-bead';
+                beadDiv.style.left = x + 'px';
+                beadDiv.style.top = y + 'px';
+                beadDiv.style.background = bead.color;
+                
+                if (bead.type === 'letter' || bead.type === 'charm') {
+                    beadDiv.textContent = bead.content;
+                    beadDiv.style.display = 'flex';
+                    beadDiv.style.alignItems = 'center';
+                    beadDiv.style.justifyContent = 'center';
+                    beadDiv.style.fontWeight = 'bold';
+                    beadDiv.style.fontSize = '14px';
+                }
+                
+                beadDiv.onclick = () => removeBead(index);
+                circle.appendChild(beadDiv);
+            });
+        }
+
+        function removeBead(index) {
+            braceletBeads.splice(index, 1);
+            renderBracelet();
+        }
+
+        function clearDesign() {
+            braceletBeads = [];
+            renderBracelet();
+        }
+
+        function saveCustomBracelet() {
+            if (braceletBeads.length === 0) {
+                alert('Please add some beads first!');
+                return;
+            }
+            cart.push({name: 'Custom Bracelet', price: 3.99});
+            alert('Custom bracelet added to cart! ($3.99)');
+            clearDesign();
+        }
+
+        function addBeadToNecklace(color) {
+            necklaceBeads.push(color);
+            renderNecklace();
+        }
+
+        function renderNecklace() {
+            const circle = document.getElementById('necklaceCircle');
+            circle.innerHTML = '';
+            
+            const radius = 140;
+            const centerX = 150;
+            const centerY = 150;
+            const angleStep = (2 * Math.PI) / Math.max(necklaceBeads.length, 30);
+            
+            necklaceBeads.forEach((color, index) => {
+                const angle = index * angleStep;
+                const x = centerX + radius * Math.cos(angle) - 10;
+                const y = centerY + radius * Math.sin(angle) - 10;
+                
+                const bead = document.createElement('div');
+                bead.className = 'bracelet-bead';
+                bead.style.left = x + 'px';
+                bead.style.top = y + 'px';
+                bead.style.background = color;
+                bead.onclick = () => {
+                    necklaceBeads.splice(index, 1);
+                    renderNecklace();
+                };
+                circle.appendChild(bead);
+            });
+        }
+
+        function clearNecklace() {
+            necklaceBeads = [];
+            renderNecklace();
+        }
+
+        function saveCustomNecklace() {
+            if (necklaceBeads.length === 0) {
+                alert('Please add some beads first!');
+                return;
+            }
+            cart.push({name: 'Custom Necklace', price: 5.99});
+            alert('Custom necklace added to cart! ($5.99)');
+            clearNecklace();
+        }
+
+        let stickerElements = [];
+
+        function addStickerText() {
+            const text = document.getElementById('stickerText').value;
+            if (!text) return;
+            
+            const canvas = document.getElementById('stickerCanvas');
+            const textDiv = document.createElement('div');
+            textDiv.style.position = 'absolute';
+            textDiv.style.left = '100px';
+            textDiv.style.top = '150px';
+            textDiv.style.fontSize = '2rem';
+            textDiv.style.fontFamily = 'Cormorant Garamond, serif';
+            textDiv.style.color = '#8DB4C7';
+            textDiv.style.cursor = 'move';
+            textDiv.textContent = text;
+            
+            canvas.appendChild(textDiv);
+            stickerElements.push(textDiv);
+            document.getElementById('stickerText').value = '';
+        }
+
+        function clearSticker() {
+            document.getElementById('stickerCanvas').innerHTML = '';
+            stickerElements = [];
+        }
+
+        function saveCustomSticker() {
+            if (stickerElements.length === 0) {
+                alert('Please add some elements first!');
+                return;
+            }
+            cart.push({name: 'Custom Sticker', price: 2.99});
+            alert('Custom sticker added to cart! ($2.99)');
+            clearSticker();
+        }
+
+        function playGame(type) {
+            const modal = document.getElementById('gameModal');
+            const content = document.getElementById('gameContent');
+            
+            if (type === 'match') {
+                content.innerHTML = `
+                    <h2 style="font-family: 'Cormorant Garamond', serif; color: var(--driftwood); margin-bottom: 2rem;">Card Matcher</h2>
+                    <p style="text-align: center; margin-bottom: 1rem;">Match pairs of coastal items in this relaxing memory game</p>
+                    <div class="game-canvas"><p style="text-align: center; padding: 2rem;">Game loading...</p></div>
+                `;
+            } else if (type === 'circle') {
+                content.innerHTML = `
+                    <h2 style="font-family: 'Cormorant Garamond', serif; color: var(--driftwood); margin-bottom: 2rem;">Perfect Circle</h2>
+                    <p style="text-align: center; margin-bottom: 1rem;">Draw the most perfect circle you can</p>
+                    <canvas id="circleCanvas" width="500" height="500" style="border: 2px solid var(--sand); border-radius: 16px; cursor: crosshair; background: white;"></canvas>
+                `;
+            } else if (type === 'catch') {
+                content.innerHTML = `
+                    <h2 style="font-family: 'Cormorant Garamond', serif; color: var(--driftwood); margin-bottom: 2rem;">Bead Catcher</h2>
+                    <p style="text-align: center; margin-bottom: 1rem;">Catch falling clay beads in your beach bag</p>
+                    <div class="game-canvas"><p style="text-align: center; padding: 2rem;">Game loading...</p></div>
+                `;
+            }
+            
+            modal.classList.add('active');
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.builder-content').forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(`${tab}-builder`).classList.add('active');
+        }
+
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.season.toLowerCase().includes(query)
+            );
+            
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+            filtered.forEach(p => grid.appendChild(createProductCard(p)));
+        }
+
+        function filterBySeason(season) {
+            loadProducts(season);
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function toggleWishlist(id) {
+            const idx = wishlist.indexOf(id);
+            if (idx > -1) wishlist.splice(idx, 1);
+            else wishlist.push(id);
+        }
+
+        function showWishlist() {
+            alert(`You have ${wishlist.length} items in your wishlist!`);
+        }
+
+        function showCart() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            alert(`You have ${cart.length} items in your cart!\nTotal: $${total.toFixed(2)}`);
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        function showHelp() {
+            document.getElementById('helpModal').classList.add('active');
+        }
+
+        function showAboutUs() {
+            document.getElementById('aboutModal').classList.add('active');
+        }
+
+        function showAccount() {
+            alert('Account features coming soon! Sign up to save your favorites and track orders.');
+        }
+
+        init();
+    </script>
+</body>
+</html>
